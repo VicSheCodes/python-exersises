@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "celery_workshop"
+version = "0.1.0"
+description = ""
+authors = ["Roy M <roym@ownbackup.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+celery = "^5.2.3"
+redis = "^4.1.4"
+fastapi = "^0.75.0"
+uvicorn = "^0.17.6"
+requests = "^2.27.1"
+postgres = "^4.0"
+SQLAlchemy = "^1.4.32"
+psycopg2 = "^2.9.3"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^22.1.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
