@@ -1,5 +1,7 @@
 # The := operator is officially known as the assignment expression operator.
-import pytest
+
+import pathlib
+import sys
 
 numbers = [2, 8, 0, 1, 1, 9, 7, 7]
 
@@ -57,6 +59,17 @@ def with_walrus_ex2():
 
 def test_without_walrus_ex2():
     assert without_walrus_ex2() == [1, 9, 25, 49, 81]
+
+def count_lines_and_words_and_characters(filename):
+    for filename in sys.argv[1:]:
+        path = pathlib.Path(filename)
+        counts = [
+            (text := path.read_text()).count("\n"),  # Number of lines
+            len(text.split()),  # Number of words
+            len(text),  # Number of characters
+        ]
+        print(*counts, path)
+
 
 
 if __name__ == "__main__":
