@@ -3,9 +3,6 @@ import tempfile
 
 
 def working_with_files():
-
-
-
     current_directory = os.getcwd()
     print("Current Working Directory:", current_directory)
 
@@ -27,6 +24,7 @@ def working_with_files():
         content = test_file.read()
 
     print(content)
+
 
 if __name__ == '__main__':
     working_with_files()
