@@ -22,7 +22,8 @@ def test_my_dict():
     print(f"\n my_dict.setdefault(11, 121): {my_dict.setdefault(11, 121)}")
 
 
-list_of_strings = ['hello', 'world', 'hi', 'ehlol', 'llohe', 'hi', 'owlrd', 'blah', 'aaalllbbb', 'bbblllaaa', 'bbkllla', 'labh', 'hlab', 'labh', 'labh', 'labh', 'labh', 'lab']
+list_of_strings = ['hello', 'world', 'hi', 'ehlol', 'llohe', 'hi', 'owlrd', 'blah', 'aaalllbbb', 'bbblllaaa', 'bbkllla',
+                   'labh', 'hlab', 'labh', 'labh', 'labh', 'labh', 'lab']
 
 
 def group_strings_by_letters(list_of_strings):
@@ -32,8 +33,21 @@ def group_strings_by_letters(list_of_strings):
         groups.setdefault(key, []).append(str)
     return list(groups.values())
 
+
 def test_group_strings_by_letters():
-   print( group_strings_by_letters(list_of_strings))
+    print(group_strings_by_letters(list_of_strings))
+
+
+input_sentence = "This is a test sentence. This sentence is for testing."
+
+def test_word_frequency_counter():
+    words = input_sentence.split()
+    word_frequency = {}
+    for word in words:
+        word_frequency[word] = word_frequency.get(word, 0) + 1
+    for k, v in word_frequency.items():
+        print(f"{k} : {v}")
+
 
 if __name__ == '__main__':
     pytest.main([__file__])

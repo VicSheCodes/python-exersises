@@ -1,5 +1,5 @@
+lst = [6, 9, 2, 4, 1, 9, 2, 1, 7]
 
-lst = [6,9,2,4,1,9,2,1,7]
 
 def calculate_second_largest(lst):
     cur_max = 0
@@ -15,8 +15,10 @@ def calculate_second_largest(lst):
 
     return second_max
 
+
 # Writing a function to find the kth largest element in a list involves creating an algorithm
-# that efficiently determines the kth largest value in the list, regardless of whether the list is sorted or unsorted.
+# that efficiently determines the kth largest value in the list, regardless of whether
+# the list is sorted or unsorted.
 
 
 def finds_kth_largest(lst, k):
@@ -25,11 +27,9 @@ def finds_kth_largest(lst, k):
 
     sorted_lst = sorted(set(lst), reverse=True)
 
-    return sorted_lst[k-1]
+    return sorted_lst[k - 1]
 
 
 if __name__ == '__main__':
     print(calculate_second_largest(lst))
     print(finds_kth_largest(lst, 2))
-
-

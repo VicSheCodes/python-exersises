@@ -3,7 +3,7 @@
 import csv
 import time
 
-with open("input_data.csv", 'w', newline='') as csv_file:
+with open("../input_data.csv", 'w', newline='') as csv_file:
     csv_file.write("Name,Age,Height,Weight\n")
 
 
@@ -58,8 +58,8 @@ def write_csv(processed_data, output_file_path):
 
 
 if __name__ == "__main__":
-    input_file_path = "input_data.csv"
-    output_file_path = "output_data.csv"
+    input_file_path = "../input_data.csv"
+    output_file_path = "../output_data.csv"
 
     # Read data from CSV
     data = read_csv(input_file_path)
