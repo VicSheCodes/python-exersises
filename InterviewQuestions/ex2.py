@@ -1,6 +1,6 @@
 """
 
-Sure! Here are some Python exercises that you can try:
+Here are some Python exercises that you can try:
 
 Fibonacci Sequence: Write a function to generate the Fibonacci sequence up to a certain number of terms.
 
@@ -27,7 +27,8 @@ Temperature Converter: Write functions to convert temperatures between Celsius a
 
 """
 
-def fib(n):
+
+def fibonacci(n):
     lst = [0, 1]
     if n <= 0:
         print(f" Invalid input")
@@ -54,6 +55,10 @@ def sum_fib(n):
             lst.append(lst[-1] + lst[-2])
         print(f" {lst}")
     print(f" the sum is : {sum(lst)}")
+
+
+def palindrome(word):
+    return str(word).lower() == str(word).lower()[::-1]
 
 
 def factorial(n):
@@ -88,6 +93,22 @@ def is_prime(n):
         print(f"{n} is a prime number.")
         return True
 
+    def string_reverse(string):
+        return string[::-1]
+
+    def string_reverse_2(string):
+        return ''.join(reversed(string))
+
+    def explain_reversed_iterator():
+        original_string = "hello"
+        reverse_iterator = reversed(original_string)
+
+        print(reverse_iterator)  # Output: <reversed object at 0x7fbd43bf0470>
+
+        # iterate over the reversed iterator
+        for char in reverse_iterator:
+            print(char)  # Output: o l l e h
+
 
 if __name__ == "__main__":
     # sum_fib(1)
@@ -100,15 +121,22 @@ if __name__ == "__main__":
     # factorial(3)
     # factorial(5)
 
-    is_prime(0)
-    is_prime(1)
-    is_prime(2)
-    is_prime(3)
-    is_prime(4)
-    is_prime(5)
-    is_prime(6)
-    is_prime(7)
-    is_prime(8)
-    is_prime(9)
-    is_prime(10)
-    is_prime(11)
+    # is_prime(0)
+    # is_prime(1)
+    # is_prime(2)
+    # is_prime(3)
+    # is_prime(4)
+    # is_prime(5)
+    # is_prime(6)
+    # is_prime(7)
+    # is_prime(8)
+    # is_prime(9)
+    # is_prime(10)
+    # is_prime(11)
+
+    print(palindrome('abba'))
+    print(palindrome('ab'))
+    print(palindrome(''))
+    print(palindrome(1221))
+    print(palindrome('abBA'))
+
