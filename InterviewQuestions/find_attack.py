@@ -4,7 +4,6 @@ CATO
 
 from datetime import datetime, timedelta
 
-
 requests = [
     {"ip": "192.168.1.1", "port": 8080, "timestamp": "2024-03-20 12:00:00"},
     {"ip": "192.168.1.2", "port": 8081, "timestamp": "2024-03-20 12:00:15"},
@@ -25,6 +24,7 @@ def detect_attack(requests):
         time = datetime.strptime(requests['Timestamp'], '%Y-%m-%d %H:%M:%S')
 
         key = f"{ip}:{port}"
+
 
 def test_detected_attack():
     detected_attacks = detect_attack(requests)

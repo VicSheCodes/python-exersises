@@ -20,6 +20,8 @@ def test_my_dict():
     print(f"\n my_dict.popitem(): {my_dict.popitem()}")
     my_dict.setdefault(11, 121)
     print(f"\n my_dict.setdefault(11, 121): {my_dict.setdefault(11, 121)}")
+    print(f"\n my_dict.get(12,0): {my_dict.get(12, 0), 144}")
+    print(f"\n my_dict.get(12): {my_dict.get(12)}")
 
 
 list_of_strings = ['hello', 'world', 'hi', 'ehlol', 'llohe', 'hi', 'owlrd', 'blah', 'aaalllbbb', 'bbblllaaa', 'bbkllla',
@@ -40,6 +42,7 @@ def test_group_strings_by_letters():
 
 input_sentence = "This is a test sentence. This sentence is for testing."
 
+
 def test_word_frequency_counter():
     words = input_sentence.split()
     word_frequency = {}
@@ -50,4 +53,5 @@ def test_word_frequency_counter():
 
 
 if __name__ == '__main__':
+    print(f"\n Running tests for {__file__}...")
     pytest.main([__file__])

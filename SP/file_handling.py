@@ -7,7 +7,7 @@ import time
 def run_time_counter(func):
     def wrapper(file_path, *args, **kwargs):
         time_start = time.perf_counter()
-        result = func(file_path)
+        result = func(file_path, *args, **kwargs)
         time_end = time.perf_counter()
         print(f"The {func.__qualname__} took {time_end - time_start:.5f} seconds to run")
         return result
