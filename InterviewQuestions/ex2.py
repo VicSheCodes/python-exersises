@@ -93,21 +93,24 @@ def is_prime(n):
         print(f"{n} is a prime number.")
         return True
 
-    def string_reverse(string):
-        return string[::-1]
 
-    def string_reverse_2(string):
-        return ''.join(reversed(string))
+def string_reverse(string):
+    return string[::-1]
 
-    def explain_reversed_iterator():
-        original_string = "hello"
-        reverse_iterator = reversed(original_string)
 
-        print(reverse_iterator)  # Output: <reversed object at 0x7fbd43bf0470>
+def string_reverse_2(string):
+    return ''.join(reversed(string))
 
-        # iterate over the reversed iterator
-        for char in reverse_iterator:
-            print(char)  # Output: o l l e h
+
+def explain_reversed_iterator():
+    original_string = "hello"
+    reverse_iterator = reversed(original_string)
+
+    print(reverse_iterator)  # Output: <reversed object at 0x7fbd43bf0470>
+
+    # iterate over the reversed iterator
+    for char in reverse_iterator:
+        print(char)  # Output: o l l e h
 
 
 if __name__ == "__main__":
@@ -139,4 +142,3 @@ if __name__ == "__main__":
     print(palindrome(''))
     print(palindrome(1221))
     print(palindrome('abBA'))
-

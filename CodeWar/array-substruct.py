@@ -2,13 +2,12 @@ def array_diff_no_duplications(arr1, arr2):
     result = list(set(arr1) - set(arr2))
     return result
 
+
 def array_diff_with_duplications(arr1, arr2):
     return {item for item in arr1 if item not in arr2}
 
 
-
 if __name__ == '__main__':
-
     # Test with two empty arrays
     assert array_diff_no_duplications([], []) == []
 
