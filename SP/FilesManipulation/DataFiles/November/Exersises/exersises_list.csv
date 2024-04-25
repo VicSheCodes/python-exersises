@@ -1,0 +1,15 @@
+Intro to Python Pathlib Library
+Here you will learn how to use the Pathlib standard Python library
+that interestingly is often seen as a substitution for the well-known OS library.
+
+
+Add Prefix to All Filenames in Folder, Pathlib
+Changing the prefixes of all the files contained in a folder.
+Renames specific files on a folder-name basis using Pathlib.
+Rename All Files Based on Sub-Sub-Folders
+Add Created Date to All Filenames in Folder
+Change File Extensions
+Create Empty Files
+Extract All ZIP Files
+Search File in Computer
+Destroy files forever
