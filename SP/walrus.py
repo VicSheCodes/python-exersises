@@ -60,6 +60,7 @@ def with_walrus_ex2():
 def test_without_walrus_ex2():
     assert without_walrus_ex2() == [1, 9, 25, 49, 81]
 
+
 def count_lines_and_words_and_characters(filename):
     for filename in sys.argv[1:]:
         path = pathlib.Path(filename)

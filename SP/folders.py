@@ -31,8 +31,10 @@ def get_size_of_files_in_folder(folder_name):
             file_size += os.path.getsize(os.path.join(dirpath, filename))
     return file_size
 
+
 def test_get_size_of_files_in_folder():
     assert get_size_of_files_in_folder('Data_files') == 2010
+
 
 if __name__ == '__main__':
     find_folders()
