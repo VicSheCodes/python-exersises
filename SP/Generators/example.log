@@ -1,0 +1,4 @@
+2024-05-05 12:01:02 INFO: This is a log message.
+2024-05-05 12:03:15 ERROR: An error occurred.
+2024-05-05 12:05:30 INFO: Another log message.
+2024-05-05 12:07:45 DEBUG: Debugging information.

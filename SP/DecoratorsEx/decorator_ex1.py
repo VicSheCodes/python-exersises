@@ -26,7 +26,7 @@ def repeat(n):
         def wrapper(*args, **kwargs):
             for _ in range(n):
                 res = func(*args, **kwargs)
-                return res
+            return res
 
         return wrapper
 
@@ -36,7 +36,7 @@ def repeat(n):
 NAMES = ["Aaron", "Bob", "Charlie"]
 
 
-@repeat(3)
+@repeat(10)
 def say_hello_again(names):
     for name in names:
         print(f" Hello, {name}!")
@@ -144,12 +144,12 @@ class Config:
 config_instance = Config.get_instance({"key": "value"})
 
 if __name__ == "__main__":
-    say_hello()
+    # say_hello()
     say_hello_again(NAMES)
     # say_my_name("Victoria")
-    # print(punctuation1("Victor"))
-    # print(punctuation2("Victor"))
-    what_time_is_it()
-    what_time_is_it()
-    result = fibonacci(10)
-    print(result)
+    print(punctuation1("Victor"))
+    print(punctuation2("Victor"))
+    # what_time_is_it()
+    # what_time_is_it()
+    # result = fibonacci(10)
+    # print(result)

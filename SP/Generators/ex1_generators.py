@@ -1,3 +1,20 @@
+"""
+Filtering Prime Numbers:
+Generate prime numbers up to 20:
+(num for num in range(2, 21) if all(num % i != 0 for i in range(2, int(num**0.5) + 1))).
+Combining and Filtering Zip:
+Generate pairs of even numbers from two lists:
+((x, y) for x, y in zip(list1, list2) if x % 2 == 0 and y % 2 == 0).
+Extracting Unique Elements:
+Generate unique elements from a list:
+(x for x in my_list if my_list.count(x) == 1).
+Parsing CSV Data:
+Generate tuples from CSV rows, skipping header:
+(tuple(row) for row in csv_data if not row.startswith('header')).
+Selecting Odd Length Strings:
+Generate strings with odd length:
+(string for string in string_list if len(string) % 2 != 0).
+"""
 import pytest
 
 

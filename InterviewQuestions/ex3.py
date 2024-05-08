@@ -184,6 +184,5 @@ def test_binary_to_decimal_converter():
 
 def find_second_largest(arr):
 
-
     if __name__ == '__main__':
         print(amicable(220, 284))
