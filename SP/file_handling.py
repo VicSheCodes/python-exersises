@@ -1,4 +1,4 @@
-# file handling
+ # file handling
 # read text file and count the occurrences of each word
 import os
 import time

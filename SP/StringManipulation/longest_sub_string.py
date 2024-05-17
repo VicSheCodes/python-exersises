@@ -13,6 +13,7 @@ def find_longest_substring_without_repeating_characters(string):
 
     return max_length, string[longest_substring_start:longest_substring_start + max_length]
 
+
 if __name__ == '__main__':
     a, b = find_longest_substring_without_repeating_characters("abcabcbb")
     print(a, b)
