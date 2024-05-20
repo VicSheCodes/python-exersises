@@ -19,6 +19,6 @@ def process_file(input_file, output_file, n):
 if __name__ == '__main__':
 
     input_file = 'OSI_model'
-    output_file = 'output.txt'
+    output_file = 'mb_OSI_model.txt'
     n = 42  # Set your desired length
     process_file(input_file, output_file, n)
