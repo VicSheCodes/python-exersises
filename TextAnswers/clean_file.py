@@ -20,5 +20,5 @@ if __name__ == '__main__':
 
     input_file = 'OSI_model'
     output_file = 'output.txt'
-    n = 50  # Set your desired length
+    n = 42  # Set your desired length
     process_file(input_file, output_file, n)

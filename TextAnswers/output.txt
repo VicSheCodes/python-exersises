@@ -1,108 +1,120 @@
-The OSI (Open Systems Interconnection) model is a
-conceptual framework
+The OSI (Open Systems Interconnection)
+model is a conceptual framework
 used to understand and implement standard
-communications between different network devices.
-It has seven layers, each with specific functions
-and protocols. Here's a brief explanation of each
-layer:
+communications between different network
+devices.
+It has seven layers, each with specific
+functions and protocols. Here's a brief
+explanation of each layer:
 
 ### 1. Physical Layer
-- Function: Transfers raw bitstream over a
-physical medium (cables, radio frequencies, etc.).
-- Devices: Hubs, repeaters, cables (Ethernet
-cables, fiber optics).
+- Function: Transfers raw bitstream over
+a physical medium (cables, radio
+frequencies, etc.).
+- Devices: Hubs, repeaters, cables
+(Ethernet cables, fiber optics).
 - Data Representation: Bits (1s and 0s).
-- Possible Problems: Signal attenuation, noise
-interference, synchronization issues.
-- Commands/Protocols: None specific to this
-layer; more about hardware specs (e.g., IEEE
-802.3 for Ethernet).
+- Possible Problems: Signal attenuation,
+noise interference, synchronization
+issues.
+- Commands/Protocols: None specific to
+this layer; more about hardware specs
+(e.g., IEEE 802.3 for Ethernet).
 
 ### 2. Data Link Layer
-- Function: Ensures reliable transmission of data
-frames between two nodes connected by a physical
-layer.
+- Function: Ensures reliable transmission
+of data frames between two nodes
+connected by a physical layer.
 - Devices: Switches, bridges.
 - Data Representation: Frames.
-- Possible Problems: Collisions, frame errors,
-MAC address spoofing.
+- Possible Problems: Collisions, frame
+errors, MAC address spoofing.
 - Commands/Protocols: Ethernet, PPP
-(Point-to-Point Protocol), MAC (Media Access
-Control) addresses.
+(Point-to-Point Protocol), MAC (Media
+Access Control) addresses.
 
 ### 3. Network Layer
-- Function: Determines the best path to move data
-from source to destination across multiple
-networks.
+- Function: Determines the best path to
+move data from source to destination
+across multiple networks.
 - Devices: Routers.
 - Data Representation: Packets.
-- Possible Problems: Routing loops, incorrect
-routing tables, IP address conflicts.
-- Commands/Protocols: IP (Internet Protocol),
-ICMP (Internet Control Message Protocol),
+- Possible Problems: Routing loops,
+incorrect routing tables, IP address
+conflicts.
+- Commands/Protocols: IP (Internet
+Protocol), ICMP (Internet Control Message
+Protocol),
 RIP (Routing Information Protocol).
 
 ### 4. Transport Layer
-- Function: Ensures complete data transfer with
-error recovery and flow control.
+- Function: Ensures complete data
+transfer with error recovery and flow
+control.
 - Devices: Hosts (end systems).
 - Data Representation: Segments (TCP) or
 Datagrams (UDP).
-- Possible Problems: Packet loss, duplication,
-retransmission issues.
-- Commands/Protocols: TCP (Transmission Control
-Protocol), UDP (User Datagram Protocol), port
-numbers.
+- Possible Problems: Packet loss,
+duplication, retransmission issues.
+- Commands/Protocols: TCP (Transmission
+Control Protocol), UDP (User Datagram
+Protocol), port numbers.
 
 ### 5. Session Layer
 - Function: Manages sessions between
-applications, establishing, maintaining, and
-terminating connections.
-- Devices: Computers, application servers.
+applications, establishing, maintaining,
+and terminating connections.
+- Devices: Computers, application
+servers.
 - Data Representation: Data streams.
-- Possible Problems: Session hijacking, session
-termination.
+- Possible Problems: Session hijacking,
+session termination.
 - Commands/Protocols: NetBIOS, PPTP
 (Point-to-Point Tunneling Protocol).
 
 ### 6. Presentation Layer
-- Function: Translates, encrypts, and compresses
-data for the application layer.
-- Devices: Computers, application servers.
-- Data Representation: Formatted data (e.g.,
-JPEG, ASCII).
-- Possible Problems: Data translation errors,
-incompatible data formats.
-- Commands/Protocols: SSL/TLS (for encryption),
-JPEG, MPEG, ASCII, EBCDIC.
+- Function: Translates, encrypts, and
+compresses data for the application layer.
+- Devices: Computers, application
+servers.
+- Data Representation: Formatted data
+(e.g., JPEG, ASCII).
+- Possible Problems: Data translation
+errors, incompatible data formats.
+- Commands/Protocols: SSL/TLS (for
+encryption), JPEG, MPEG, ASCII, EBCDIC.
 
 ### 7. Application Layer
-- Function: Provides network services directly to
-end-user applications.
-- Devices: Computers, smartphones, application
-servers.
+- Function: Provides network services
+directly to end-user applications.
+- Devices: Computers, smartphones,
+application servers.
 - Data Representation: Application data.
-- Possible Problems: Application bugs, protocol
-mismatches.
-- Commands/Protocols: HTTP, FTP, SMTP, DNS,
-Telnet.
+- Possible Problems: Application bugs,
+protocol mismatches.
+- Commands/Protocols: HTTP, FTP, SMTP,
+DNS, Telnet.
 
 ### Summary of Issues and Commands:
-- Physical Layer: Signal issues, use hardware
-diagnostic tools.
-- Data Link Layer: Collision detection (CSMA/CD),
-frame checksums.
+- Physical Layer: Signal issues, use
+hardware diagnostic tools.
+- Data Link Layer: Collision detection
+(CSMA/CD), frame checksums.
 - Network Layer: Routing tables, ping,
 traceroute.
 - Transport Layer: TCP/IP stack commands,
 netstat, flow control.
 - Session Layer: Session management APIs.
-- Presentation Layer: Encryption/decryption
-commands, data format conversion tools.
-- Application Layer: Protocol-specific commands
-(e.g., `GET` for HTTP, `MAIL FROM` for SMTP).
+- Presentation Layer:
+Encryption/decryption commands, data
+format conversion tools.
+- Application Layer: Protocol-specific
+commands (e.g., `GET` for HTTP, `MAIL
+FROM` for SMTP).
 
-Each layer builds on the previous one, creating a
-stack that ensures data can be transmitted,
-received, and understood between different
-systems and devices across a network.
+Each layer builds on the previous one,
+creating a stack that ensures data can be
+transmitted,
+received, and understood between
+different systems and devices across a
+network.
