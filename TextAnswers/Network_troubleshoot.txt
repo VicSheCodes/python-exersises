@@ -1,4 +1,7 @@
-To troubleshoot a network involving a switch and router, follow these steps systematically, verifying each component and its configurations. We'll use common networking commands available on modern Linux distributions like Parrot OS. This guide assumes basic network setup and knowledge.
+To troubleshoot a network involving a switch and router, follow these steps systematically,
+verifying each component and its configurations.
+We'll use common networking commands available on modern Linux distributions like Parrot OS.
+This guide assumes basic network setup and knowledge.
 
 1. Check Physical Connections
    - Ensure all cables are securely connected to the correct ports on both the switch and router.
