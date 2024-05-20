@@ -31,3 +31,21 @@ Sure:
    - UDP is used for real-time applications
     where speed and efficiency are prioritized,
      such as video streaming, online gaming, and VoIP.
+
+TCP (Transmission Control Protocol) protocol.
+The TCP handshake involves a series of steps
+to negotiate and synchronize communication parameters.
+ Here's a simplified overview of the TCP handshake process:
+
+SYN (Synchronize):
+The initiating device sends a TCP segment with the SYN flag set to the destination device. This segment contains the initial sequence number (ISN) chosen by the sender.
+
+SYN-ACK (Synchronize-Acknowledgment):
+The destination device responds with a TCP segment that has both the SYN and ACK flags set. It acknowledges the receipt of the SYN segment and includes its own initial sequence number (ISN) for the connection.
+
+ACK (Acknowledgment):
+Finally, the initiating device sends an acknowledgment segment to confirm the receipt of the SYN-ACK segment from the destination device. This segment has the ACK flag set and acknowledges the receipt of the SYN segment.
+
+After this three-way handshake is completed, the TCP connection is established, and data transfer can begin in both directions.
+
+So, in summary, the TCP/IP handshake involves three steps: SYN, SYN-ACK, and ACK.

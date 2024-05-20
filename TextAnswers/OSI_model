@@ -53,13 +53,13 @@ RIP (Routing Information Protocol).
 - **Commands/Protocols**: HTTP, FTP, SMTP, DNS, Telnet.
 
 ### Summary of Issues and Commands:
-- **Physical Layer**: Signal issues, use hardware diagnostic tools.
-- **Data Link Layer**: Collision detection (CSMA/CD), frame checksums.
-- **Network Layer**: Routing tables, ping, traceroute.
-- **Transport Layer**: TCP/IP stack commands, netstat, flow control.
-- **Session Layer**: Session management APIs.
-- **Presentation Layer**: Encryption/decryption commands, data format conversion tools.
-- **Application Layer**: Protocol-specific commands (e.g., `GET` for HTTP, `MAIL FROM` for SMTP).
+- Physical Layer**: Signal issues, use hardware diagnostic tools.
+- Data Link Layer**: Collision detection (CSMA/CD), frame checksums.
+- Network Layer**: Routing tables, ping, traceroute.
+- Transport Layer**: TCP/IP stack commands, netstat, flow control.
+- Session Layer**: Session management APIs.
+- Presentation Layer**: Encryption/decryption commands, data format conversion tools.
+- Application Layer**: Protocol-specific commands (e.g., `GET` for HTTP, `MAIL FROM` for SMTP).
 
 Each layer builds on the previous one, creating a stack that ensures data can be transmitted,
 received, and understood between different systems and devices across a network.

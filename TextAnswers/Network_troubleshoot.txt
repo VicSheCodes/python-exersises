@@ -36,7 +36,7 @@ This guide assumes basic network setup and knowledge.
    sudo ip route add <destination_network> via <gateway_IP>
    ```
 
-5. **Check Default Gateway**
+5. Check Default Gateway
    ```sh
    ip route | grep default
    ```
@@ -45,17 +45,18 @@ This guide assumes basic network setup and knowledge.
    sudo ip route add default via <gateway_IP>
    ```
 
-6. **Check ARP Table**
+6. Check ARP Table
    ```sh
    ip neigh show
    ```
-   - Verify that the IP-to-MAC address mappings are correct. Stale entries can cause communication failures.
+   - Verify that the IP-to-MAC address mappings are correct.
+   Stale entries can cause communication failures.
    - Clear ARP cache if needed:
    ```sh
    sudo ip neigh flush all
    ```
 
-7. **Check DNS Configuration**
+7. Check DNS Configuration
    ```sh
    cat /etc/resolv.conf
    ```
@@ -65,20 +66,20 @@ This guide assumes basic network setup and knowledge.
    sudo nano /etc/resolv.conf
    ```
 
-8. **Ping Test**
+8. Ping Test
    - Test connectivity to the gateway, another host on the network, and an external host.
    ```sh
    ping <IP_address>
    ```
    - Success indicates the network layer is working. Failure suggests a problem along the route.
 
-9. **Traceroute**
+9. Traceroute
    ```sh
    traceroute <destination>
    ```
    - Identifies the path packets take to reach the destination and helps locate where failures occur.
 
-10. **Check Firewall Rules**
+10. Check Firewall Rules
     ```sh
     sudo iptables -L
     ```
@@ -91,7 +92,7 @@ This guide assumes basic network setup and knowledge.
     sudo iptables -P OUTPUT ACCEPT
     ```
 
-11. **Check for Network Services**
+11. Check for Network Services**
     ```sh
     sudo systemctl status <service>
     ```
@@ -100,10 +101,18 @@ This guide assumes basic network setup and knowledge.
     sudo systemctl restart <service>
     ```
 
-12. **Check Switch Configuration**
+12. Check Switch Configuration
     - Log into the switch and verify port configurations, VLAN settings, and trunk/access ports. Commands vary by switch OS.
 
-13. **Check Router Configuration**
+13. Check Router Configuration
     - Log into the router and verify interface configurations, routing tables, and access control lists (ACLs).
+
+14. NAT Configuration:
+    - Check NAT configuration: Ensure NAT is configured correctly if applicable.
+      - Command: show ip nat translations
+
+15. DHCP Configuration:
+    - Check DHCP settings: Ensure DHCP server settings are correct.
+      - Command: show dhcp pool
 
 By systematically verifying each component and configuration, you can identify and resolve network issues effectively.
