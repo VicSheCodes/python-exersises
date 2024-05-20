@@ -1,0 +1,106 @@
+To troubleshoot a network involving a switch and router, follow these steps systematically, verifying each component and its configurations. We'll use common networking commands available on modern Linux distributions like Parrot OS. This guide assumes basic network setup and knowledge.
+
+1. Check Physical Connections
+   - Ensure all cables are securely connected to the correct ports on both the switch and router.
+   - Verify LED indicators on ports (should be green for active connections).
+
+2. Check Network Interface Status**
+
+   ip link show
+
+   - Look for interfaces that are `UP` and `LOWER_UP`. If an interface is down, bring it up with:
+
+   sudo ip link set <interface> up
+
+
+3. Check IP Address Configuration
+
+   ip addr show
+
+   - Ensure each interface has the correct IP address. Misconfigurations can lead to connectivity issues.
+   - To assign an IP address:
+
+   sudo ip addr add <IP_address>/<CIDR> dev <interface>
+
+
+4. Check Routing Table
+
+   ip route show
+
+   - Ensure there are routes to all necessary networks. Missing routes can cause packets to be dropped.
+   - Add a route if needed:
+   ```sh
+   sudo ip route add <destination_network> via <gateway_IP>
+   ```
+
+5. **Check Default Gateway**
+   ```sh
+   ip route | grep default
+   ```
+   - Ensure there is a default gateway set. If missing, add it:
+   ```sh
+   sudo ip route add default via <gateway_IP>
+   ```
+
+6. **Check ARP Table**
+   ```sh
+   ip neigh show
+   ```
+   - Verify that the IP-to-MAC address mappings are correct. Stale entries can cause communication failures.
+   - Clear ARP cache if needed:
+   ```sh
+   sudo ip neigh flush all
+   ```
+
+7. **Check DNS Configuration**
+   ```sh
+   cat /etc/resolv.conf
+   ```
+   - Ensure the correct DNS servers are listed. Misconfigured DNS can prevent hostname resolution.
+   - Update DNS servers if necessary:
+   ```sh
+   sudo nano /etc/resolv.conf
+   ```
+
+8. **Ping Test**
+   - Test connectivity to the gateway, another host on the network, and an external host.
+   ```sh
+   ping <IP_address>
+   ```
+   - Success indicates the network layer is working. Failure suggests a problem along the route.
+
+9. **Traceroute**
+   ```sh
+   traceroute <destination>
+   ```
+   - Identifies the path packets take to reach the destination and helps locate where failures occur.
+
+10. **Check Firewall Rules**
+    ```sh
+    sudo iptables -L
+    ```
+    - Ensure firewall rules are not blocking traffic. Modify rules if necessary.
+    - Example to allow all traffic:
+    ```sh
+    sudo iptables -F
+    sudo iptables -P INPUT ACCEPT
+    sudo iptables -P FORWARD ACCEPT
+    sudo iptables -P OUTPUT ACCEPT
+    ```
+
+11. **Check for Network Services**
+    ```sh
+    sudo systemctl status <service>
+    ```
+    - Ensure essential services (e.g., DHCP, DNS) are running. Restart if needed:
+    ```sh
+    sudo systemctl restart <service>
+    ```
+
+12. **Check Switch Configuration**
+    - Log into the switch and verify port configurations, VLAN settings, and trunk/access ports. Commands vary by switch OS.
+
+13. **Check Router Configuration**
+    - Log into the router and verify interface configurations, routing tables, and access control lists (ACLs).
+
+By systematically verifying each component and configuration, you can identify and resolve network issues effectively.

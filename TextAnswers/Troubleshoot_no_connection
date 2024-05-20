@@ -1,0 +1,60 @@
+Network troubleshooting:
+
+1. Physical Connectivity Issues:
+   - Check cables: Ensure all cables are properly connected and not damaged.
+     - Command: show interfaces status
+
+2. Device Configuration Issues:
+   - Check switch/router configuration: Ensure the switch/router configurations are correct.
+     - Command: show running-config
+
+3. Network Layer Issues:
+   - Check IP configurations: Verify IP addresses, subnet masks, and default gateways are correctly configured.
+     - Command: show ip interface brief
+
+4. Routing Issues:
+   - Check routing tables: Verify that the router has routes to the intended destinations.
+     - Command: show ip route
+
+5. VLAN Configuration Issues:
+   - Check VLAN configurations: Verify VLAN configurations on the switch.
+     - Command: show vlan
+
+6. Interface Status:
+   - Check interface status: Verify if the interfaces are up or down.
+     - Command: show interfaces
+
+7. MAC Address Table:
+   - Check MAC address table: Ensure MAC addresses are learned correctly.
+     - Command: show mac address-table
+
+8. Security Settings:
+   - Check access control lists (ACLs): Ensure there are no ACLs blocking traffic.
+     - Command: show access-lists
+
+9. Hardware Issues:
+   - Check hardware health: Verify the health of switch/router hardware components.
+     - Command: show environment
+
+10. Traffic Analysis:
+    - Analyze traffic: Look for abnormal traffic patterns or congestion.
+      - Command: show interfaces counters
+
+11. DNS Configuration:
+    - Check DNS settings: Ensure DNS servers are configured correctly.
+      - Command: show dns
+
+12. Firewall Settings:
+    - Check firewall rules: Verify if firewall rules are blocking traffic.
+      - Command: show firewall
+
+13. NAT Configuration:
+    - Check NAT configuration: Ensure NAT is configured correctly if applicable.
+      - Command: show ip nat translations
+
+14. DHCP Configuration:
+    - Check DHCP settings: Ensure DHCP server settings are correct.
+      - Command: show dhcp pool
+
+By systematically checking each of these potential issues and using the corresponding commands,
+you can identify and resolve network problems efficiently.
