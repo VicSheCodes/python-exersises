@@ -1,0 +1,13 @@
+HTTP (Hypertext Transfer Protocol)
+is a protocol used for transmitting data over
+the internet. It operates on the application
+layer of the OSI model and transfers data
+in plain text format.
+
+HTTPS (Hypertext Transfer Protocol Secure)
+is a secure version of HTTP that uses encryption
+to protect the data transmitted between
+the client and the server.
+It utilizes SSL/TLS protocols to establish
+ a secure connection, ensuring c
+ onfidentiality and integrity of the data exchanged.

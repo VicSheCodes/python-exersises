@@ -18,7 +18,7 @@ def process_file(input_file, output_file, n):
 
 if __name__ == '__main__':
 
-    input_file = 'OSI_model'
-    output_file = 'mb_OSI_model.txt'
+    input_file = 'Switch_vs_Router'
+    output_file = 'mb_Switch_vs_Router'
     n = 42  # Set your desired length
     process_file(input_file, output_file, n)
