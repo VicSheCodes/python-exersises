@@ -1,0 +1,33 @@
+Certainly:
+
+1. Functionality:
+- Switch operates at the Data Link
+layer (Layer 2) of the OSI model.
+- Router operates at the Network layer
+(Layer 3) of the OSI model.
+
+2. Addressing:
+- Switch forwards packets based on MAC
+addresses.
+- Router forwards packets based on IP
+addresses.
+
+3. Broadcast Handling:
+- Switch forwards broadcasts within
+the same VLAN.
+- Router does not forward broadcasts
+by default.
+
+4. Subnet Handling:
+- Switch does not understand IP
+subnets; it operates within a single
+subnet.
+- Router can connect multiple subnets
+and facilitate communication between them.
+
+5. Scope of Operation:
+- Switch operates within a LAN (Local
+Area Network).
+- Router connects multiple networks
+and can operate within a LAN or WAN (Wide
+Area Network).
