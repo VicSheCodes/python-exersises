@@ -3,6 +3,10 @@ class Node:
         self.data = data
         self.next = next
 
+    def __repr__(self):
+        return f"|data={self.data}| next->{repr(self.next)}"
+
+
 
 class LinkedList:
     def __init__(self, head=None):
@@ -84,8 +88,28 @@ class LinkedList:
         if end:
             last.next = end
 
+
+def merge_two_sorted_lists(l1, l2):
+        dummy = Node()
+        tail = dummy
+        while l1 and l2:
+            if l1.data < l2.data:
+                tail.next = l1
+                l1 = l1.next
+            else:
+                tail.next = l2
+                l2 = l2.next
+            tail = tail.next
+        tail.next = l1 if l1 else l2
+        return dummy.next
+
+
+
+
+
 if __name__ == "__main__":
     ll = LinkedList()
+
     for i in range(2, 21):
         ll.append_ll(i)
     ll.print_ll()
@@ -97,4 +121,43 @@ if __name__ == "__main__":
     ll.print_ll()
     ll.create_cycle(3)
     print(f"\n Is there a cycle in the list? {ll.find_cycle()}")
+
+    l1 = Node(1, Node(3, Node(5, Node(6))))
+    l2 = Node(2, Node(4, Node(7)))
+    while l1:
+        print(l1.data, end="->")
+        l1 = l1.next
+    print("None")
+
+    l3 = LinkedList()
+    l4 = LinkedList()
+    data_3 = [10, 20, 30, 40, 50, 666]
+    data_4 = [15, 25, 30, 45, 50, 666]
+
+    for i in data_3:
+        l3.append_ll(i)
+    for i in data_4:
+        l4.append_ll(i)
+
+    # Example usage
+    list1 = Node(1, Node(3, Node(5)))
+    list2 = Node(2, Node(4, Node(6)))
+
+    print(repr(list1))
+    print(repr(list2))
+    merged_list = merge_two_sorted_lists(list1, list2)
+
+    print(repr(merged_list))
+
+    while merged_list:
+        print(merged_list.data, end=" -> ")
+        merged_list = merged_list.next
+    # Output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 ->
+
+
+
+
+
+
+
 
