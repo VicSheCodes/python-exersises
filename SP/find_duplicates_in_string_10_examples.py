@@ -1,5 +1,5 @@
 """
-here are 10 examples of finding duplicate characters in a string, each emphasizing different aspects
+ examples of finding duplicate characters in a string, each emphasizing different aspects
 such as readability, simplicity, runtime, memory efficiency, performance, use of collections,
 built-in functions, etc
 """
