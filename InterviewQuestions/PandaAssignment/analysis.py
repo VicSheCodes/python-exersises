@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 
 
@@ -30,4 +32,10 @@ def analyze(factbook_pop: str, factbook_obesity: str) -> pd.DataFrame:
     return top
 
 
-print(analyze('c2119.csv', 'c2228.csv'))
+path = os.path.join(os.path.dirname(__file__), 'data')
+factbook_pop_path = os.path.join(path, 'c2119.csv')
+factbook_obesity_path = os.path.join(path, 'c2228.csv')
+print(path, factbook_pop_path, factbook_obesity_path)
+print(analyze(factbook_pop_path, factbook_obesity_path))
+
+# print(analyze('c2119.csv', 'c2228.csv'))
