@@ -1,2 +1,3 @@
 # exersises
-simple exersizes to study python or new technology
+Various exercises to study Python for job interviews.
+
