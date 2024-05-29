@@ -1,0 +1,8 @@
+
+Here are some workflow tips for working within the Qualified IDE:
+
+The "Run Tests" button will execute all tests using the unittest runner.
+Feel free to click “Run Tests” as many times as you want, some basic tests have been provided for you.
+Feel free to log information to STDOUT while running tests to better understand the data you are working with.
+Feel free to add your own tests to aid your process
+Once you are ready to submit your final solution, don’t forget to clean up your debugging statements before submitting.

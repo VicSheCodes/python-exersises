@@ -16,9 +16,9 @@ def process_file(input_file, output_file, n):
             else:
                 f.write(line)
 
-if __name__ == '__main__':
 
-    input_file = 'Switch_vs_Router'
-    output_file = 'mb_Switch_vs_Router'
+if __name__ == '__main__':
+    input_file = 'Network_troubleshoot.txt'
+    output_file = 'mb_Network_troubleshoot2.txt'
     n = 42  # Set your desired length
     process_file(input_file, output_file, n)
