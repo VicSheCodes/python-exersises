@@ -113,6 +113,19 @@ def explain_reversed_iterator():
         print(char)  # Output: o l l e h
 
 
+def fizzbuzz():
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+
+
+
 if __name__ == "__main__":
     # sum_fib(1)
     # sum_fib(2)
@@ -137,8 +150,9 @@ if __name__ == "__main__":
     # is_prime(10)
     # is_prime(11)
 
-    print(palindrome('abba'))
-    print(palindrome('ab'))
-    print(palindrome(''))
-    print(palindrome(1221))
-    print(palindrome('abBA'))
+    # print(palindrome('abba'))
+    # print(palindrome('ab'))
+    # print(palindrome(''))
+    # print(palindrome(1221))
+    # print(palindrome('abBA'))
+    print(fizzbuzz())
